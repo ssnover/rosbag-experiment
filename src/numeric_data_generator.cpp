@@ -5,8 +5,8 @@
 
 #include <cmath>
 #include <std_msgs/Float64.h>
-#include "numeric_data_generator.hpp"
-#include "std_msgs_utility.hpp"
+#include "rosbag_experiment/numeric_data_generator.hpp"
+#include "rosbag_experiment/std_msgs_utility.hpp"
 
 NumericDataGenerator::NumericDataGenerator(ros::NodeHandle &nodeHandle, double frequency)
   : mDataPublisher(nodeHandle.advertise<std_msgs::Float64>("data", 10)),

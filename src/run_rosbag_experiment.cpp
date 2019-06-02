@@ -7,7 +7,7 @@
 #include <csignal>
 #include <thread>
 #include <ros/ros.h>
-#include "numeric_data_generator.hpp"
+#include "rosbag_experiment/numeric_data_generator.hpp"
 
 using namespace std::chrono_literals;
 
@@ -17,7 +17,7 @@ int main(int argc, char ** argv)
 {
   ros::init(argc, argv, "data_generator",
             ros::init_options::NoSigintHandler | ros::init_options::NoRosout);
-  signal(SIGINT, [](int /* sig */){ interrupted = true; });
+  signal(SIGINT, [](int /* sig */){ interrupted = true; ros::shutdown(); });
 
   // Initialize the generator object
   ros::NodeHandle handle;

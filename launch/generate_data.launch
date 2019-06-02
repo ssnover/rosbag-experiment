@@ -1,0 +1,7 @@
+<launch>
+
+  <node name = "generate_data"
+        pkg  = "rosbag_experiment"
+        type = "run_rosbag_experiment" />
+
+</launch>
