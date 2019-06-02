@@ -1,0 +1,14 @@
+<package format="2">
+
+    <name>rosbag_experiment</name>
+    <version>0.1.0</version>
+    <description>
+        A small package to experiment with bagging various types.
+    </description>
+    <maintainer email="TODO@gmail.com">TODO</maintainer>
+    <license>MIT</license>
+
+    <buildtool_depend>catkin</buildtool_depend>
+    <build_depend>roscpp</build_depend>
+
+</package>
