@@ -1,0 +1,15 @@
+<launch>
+
+  <node name   = "replay"
+        pkg    = "rosbag"
+        type   = "play"
+        output = "screen"
+        args   = "$(find rosbag_experiment)/bags/numeric_2019-06-02-15-16-05.bag" />
+
+  <node name   = "plot"
+        pkg    = "rqt_gui"
+        type   = "rqt_gui"
+        output = "screen"
+        args   = "--perspective-file $(find rosbag_experiment)/perspectives/visual_generated_data.perspective" />
+
+</launch>
